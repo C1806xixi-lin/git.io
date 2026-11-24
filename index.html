@@ -1,26 +1,80 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wandering</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:system-ui,-apple-system;max-width:700px;margin:80px auto;padding:0 24px;color:#222;background:#f8f8f8}
-        h1{font-weight:400;margin-bottom:16px;letter-spacing:1px}
-        .desc{color:#555;font-size:16px;line-height:1.8;margin-bottom:40px}
-        .info{margin-top:20px;line-height:2}
-        a{color:#336699;text-decoration:none}
-        a:hover{text-decoration:underline}
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C1806xixi-lin | AI Infrastructure Portfolio</title>
+  <meta name="description" content="Selected work on GPU cluster design, LLM inference sizing, and troubleshooting for healthcare AI.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rove Notes</h1>
-    <p class="desc">Wondering through every rove｜心怀遐思，漫游人间</p>
-    <div class="info">
-        <p>个人空间</p>
-        <p>Contact：xxx@xxx.com</p>
-        <p>Github：<a href="https://github.com/C127XiXilin">github.com/C127XiXilin</a></p>
-    </div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="./">C1806xixi-lin</a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="rove-notes/">Rove Notes</a>
+      <a href="https://github.com/C1806xixi-lin">GitHub</a>
+    </nav>
+  </header>
+  <main class="shell" id="main">
+    <section class="hero" aria-labelledby="intro">
+      <div class="hero-copy">
+        <p class="eyebrow">Healthcare AI infrastructure</p>
+        <h1 id="intro">From model requirements to a testable GPU plan.</h1>
+        <p>I work on GPU cluster design and LLM serving for healthcare AI. These projects show how I size a system, explain the trade-offs, and check what happens under load.</p>
+      </div>
+      <svg class="diagram" viewBox="0 0 256 230" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+            <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#446586" stroke-opacity=".32"/>
+          </pattern>
+        </defs>
+        <rect width="256" height="230" fill="url(#grid)"/>
+        <path d="M68 62v35l-33 42v28m33-70 58 42v28m62-105v35l-62 42m62-42 35 42v28" stroke="#91bfdf" stroke-width="2" fill="none"/>
+        <g fill="#193450" stroke="#91bfdf" stroke-width="2">
+          <rect x="45" y="43" width="46" height="20" rx="4"/>
+          <rect x="165" y="43" width="46" height="20" rx="4"/>
+          <rect x="15" y="166" width="40" height="20" rx="4"/>
+          <rect x="106" y="166" width="40" height="20" rx="4"/>
+          <rect x="203" y="166" width="40" height="20" rx="4"/>
+        </g>
+        <g fill="#b4e4d4"><circle cx="68" cy="97" r="4"/><circle cx="188" cy="97" r="4"/><circle cx="126" cy="139" r="4"/></g>
+      </svg>
+    </section>
+    <section class="projects" id="projects" aria-labelledby="work">
+      <h2 id="work">Selected projects</h2>
+      <ol class="project-list">
+        <li>
+          <article>
+            <p class="eyebrow">01 / Reference design</p>
+            <h3>500 PFLOP/s healthcare AI compute center</h3>
+            <p>A worked design for a shared research and inference cluster. It covers GPU and rack sizing, fabric ports, checkpoint storage, scheduling, and recovery tests.</p>
+            <a href="https://github.com/C1806xixi-lin/C1806xixi-lin/blob/main/case-studies/healthcare-ai-compute-center.md">Read the compute center case study</a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="eyebrow">02 / Sizing calculator</p>
+            <h3>LLM inference GPU sizing skill</h3>
+            <p>Work out what fits on a card and which configuration is worth testing first. Includes an offline Python calculator and a 70B H100/H200 example.</p>
+            <a href="https://github.com/C1806xixi-lin/C1806xixi-lin/tree/main/skills/inference-gpu-sizing">Open the GPU sizing skill</a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="eyebrow">03 / Troubleshooting lab</p>
+            <h3>Why is the first token slow?</h3>
+            <p>Compare queueing, long-prompt prefill, and slow decode using simulated traces. The demo runs locally without a GPU.</p>
+            <a href="https://github.com/C1806xixi-lin/llm-latency-troubleshooting">Run the latency lab</a>
+          </article>
+        </li>
+      </ol>
+      <p class="related">For the customer conversation: <a href="https://github.com/C1806xixi-lin/inspiration">the technical presales toolkit</a> walks through discovery, GPU selection, and PoC acceptance.</p>
+    </section>
+  </main>
+  <footer class="shell site-footer">
+    <p><a href="https://github.com/C1806xixi-lin">GitHub profile</a> <span aria-hidden="true">·</span> <a href="rove-notes/">Rove Notes</a></p>
+  </footer>
 </body>
 </html>
